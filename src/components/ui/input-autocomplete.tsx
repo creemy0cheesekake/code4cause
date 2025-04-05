@@ -6,16 +6,18 @@ import { Input } from "@/components/ui/input";
 
 export function InputAutocomplete({ value, setValue, options, placeholder, emptyPlaceholder, ...props }) {
 	const [open, setOpen] = React.useState<boolean>(true);
+	// its weird, dont touch it
+	const [refresh, refresher] = React.useState<number>(0);
 
 	return (
 		<div style={{ position: "relative" }}>
-			<Input defaultValue={value} {...props} />
-			{open && <Dropdown options={options} value={value} setValue={setValue} setOpen={setOpen} />}
+			<Input key={refresh} defaultValue={value} {...props} />
+			{open && <Dropdown options={options} refresher={refresher} setValue={setValue} setOpen={setOpen} />}
 		</div>
 	);
 }
 
-const Dropdown = ({ options, value, setValue, setOpen }) => {
+const Dropdown = ({ options, refresher, setValue, setOpen }) => {
 	return (
 		<>
 			<div className={"absolute w-fulll border-blue-200/75 z-100"} style={{ top: "120%" }}>
@@ -27,8 +29,9 @@ const Dropdown = ({ options, value, setValue, setOpen }) => {
 							}
 							key={i}
 							onClick={() => {
-								setValue("skib");
-								console.log(value);
+								setValue(el);
+								// its weird, dont touch it
+								refresher(i => i + 1);
 								setOpen(false);
 							}}
 						>
