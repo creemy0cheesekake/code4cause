@@ -10,12 +10,12 @@ export function InputAutocomplete({ value, setValue, options, placeholder, empty
 	return (
 		<div style={{ position: "relative" }}>
 			<Input defaultValue={value} {...props} />
-			{open && <Dropdown options={options} setValue={setValue} setOpen={setOpen} />}
+			{open && <Dropdown options={options} value={value} setValue={setValue} setOpen={setOpen} />}
 		</div>
 	);
 }
 
-const Dropdown = ({ options, setValue, setOpen }) => {
+const Dropdown = ({ options, value, setValue, setOpen }) => {
 	return (
 		<>
 			<div className={"absolute w-fulll border-blue-200/75 z-100"} style={{ top: "120%" }}>
@@ -27,7 +27,8 @@ const Dropdown = ({ options, setValue, setOpen }) => {
 							}
 							key={i}
 							onClick={() => {
-								setValue(el);
+								setValue("skib");
+								console.log(value);
 								setOpen(false);
 							}}
 						>

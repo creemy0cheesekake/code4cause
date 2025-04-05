@@ -45,10 +45,10 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ onProfileUpdate, initPr
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
-		if (graduationYear && location && selectedInterests.length > 0) {
+		if (graduationYear && cityInput && selectedInterests.length > 0) {
 			onProfileUpdate({
 				graduationYear,
-				location,
+				cityInput,
 				interests: selectedInterests,
 			});
 			setFormCompleted(true);
@@ -62,9 +62,9 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ onProfileUpdate, initPr
 	const handleCityInputChange = async (e: React.FormEvent) => {
 		const inputVal = e.target.value;
 		setCityInput(inputVal);
-		setPossibleCities(
-			inputVal ? cityList.filter(el => el.toLowerCase().startsWith(inputVal.toLowerCase())).slice(0, 5) : [],
-		);
+		if (inputVal)
+			setPossibleCities(cityList.filter(el => el.toLowerCase().startsWith(inputVal.toLowerCase())).slice(0, 5));
+		else setPossibleCities([]);
 	};
 
 	if (formCompleted) {
@@ -151,7 +151,7 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ onProfileUpdate, initPr
 					<Button
 						type="submit"
 						className="w-full bg-edu-blue hover:bg-edu-blue/90"
-						disabled={!graduationYear || !location || selectedInterests.length === 0}
+						disabled={!graduationYear || !cityList.includes(cityInput) || selectedInterests.length === 0}
 					>
 						Create My Dashboard
 					</Button>
