@@ -51,53 +51,54 @@ const Index: React.FC = () => {
 							<StudentProfile onProfileUpdate={handleProfileUpdate} initProfile={profile} />
 						</div>
 					) : (
-						<div className="space-y-6 md:grid md:grid-cols-3 md:gap-6">
-							<div className="md:col-span-1">
-								<StudentProfile onProfileUpdate={handleProfileUpdate} initProfile={profile} />
-								<PriorityTasks profile={profile} />
-							</div>
+						<div>
+							<div className="space-y-6 md:grid md:grid-cols-3 md:gap-6">
+								<div className="md:col-span-1">
+									<StudentProfile onProfileUpdate={handleProfileUpdate} initProfile={profile} />
+									<PriorityTasks profile={profile} />
+								</div>
 
-							<div className="md:col-span-2 space-y-6">
-								{yearsToGraduate(profile.graduationYear) <= 1 &&
-									yearsToGraduate(profile.graduationYear) >= 0 && <CommonAppInfoCard />}
+								<div className="md:col-span-2 space-y-6">
+									{yearsToGraduate(profile.graduationYear) <= 1 &&
+										yearsToGraduate(profile.graduationYear) >= 0 && <CommonAppInfoCard />}
 
-								{yearsToGraduate(profile.graduationYear) <= 3 &&
-									yearsToGraduate(profile.graduationYear) >= 0 && <OtherTestsInfoCard />}
+									{yearsToGraduate(profile.graduationYear) <= 3 &&
+										yearsToGraduate(profile.graduationYear) >= 0 && <OtherTestsInfoCard />}
 
-								{yearsToGraduate(profile.graduationYear) <= 5 &&
-									yearsToGraduate(profile.graduationYear) >= 1 && <PSATInfoCard />}
+									{yearsToGraduate(profile.graduationYear) <= 5 &&
+										yearsToGraduate(profile.graduationYear) >= 1 && <PSATInfoCard />}
 
-								{yearsToGraduate(profile.graduationYear) <= 5 &&
-									yearsToGraduate(profile.graduationYear) >= 2 && <PSATWhy />}
+									{yearsToGraduate(profile.graduationYear) <= 5 &&
+										yearsToGraduate(profile.graduationYear) >= 2 && <PSATWhy />}
 
-								{yearsToGraduate(profile.graduationYear) <= 3 &&
-									yearsToGraduate(profile.graduationYear) >= 0 && (
-										<APSuggestionsCard profile={profile} />
-									)}
+									{yearsToGraduate(profile.graduationYear) <= 3 &&
+										yearsToGraduate(profile.graduationYear) >= 0 && (
+											<APSuggestionsCard profile={profile} />
+										)}
 
-								{yearsToGraduate(profile.graduationYear) <= 5 &&
-									yearsToGraduate(profile.graduationYear) >= 0 && (
-										<CompetitionsCard profile={profile} />
-									)}
+									{yearsToGraduate(profile.graduationYear) <= 5 &&
+										yearsToGraduate(profile.graduationYear) >= 0 && (
+											<CompetitionsCard profile={profile} />
+										)}
 
-								<Dashboard profile={profile} />
+									<Dashboard profile={profile} />
 
-								{yearsToGraduate(profile.graduationYear) <= 5 &&
-									yearsToGraduate(profile.graduationYear) >= 0 && <DualEnrollmentCard />}
+									{yearsToGraduate(profile.graduationYear) <= 5 &&
+										yearsToGraduate(profile.graduationYear) >= 0 && <DualEnrollmentCard />}
 
-								{yearsToGraduate(profile.graduationYear) <= 5 &&
-									yearsToGraduate(profile.graduationYear) >= 0 && <VolunteeringCard />}
+									{yearsToGraduate(profile.graduationYear) <= 5 &&
+										yearsToGraduate(profile.graduationYear) >= 0 && <VolunteeringCard />}
 
-								<CollegeExplorer profile={profile} />
+									<CollegeExplorer profile={profile} />
 
-								<MapCard profile={profile} />
+									<MapCard profile={profile} />
+								</div>
 							</div>
 						</div>
 					)}
 				</div>
 			</main>
-
-			<Footer />
+			{profile && <Footer />}
 		</div>
 	);
 };
