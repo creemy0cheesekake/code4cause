@@ -65,10 +65,10 @@ const Index: React.FC = () => {
 									{yearsToGraduate(profile.graduationYear) <= 3 &&
 										yearsToGraduate(profile.graduationYear) >= 0 && <OtherTestsInfoCard />}
 
-									{yearsToGraduate(profile.graduationYear) <= 5 &&
+									{yearsToGraduate(profile.graduationYear) <= 8 &&
 										yearsToGraduate(profile.graduationYear) >= 1 && <PSATInfoCard />}
 
-									{yearsToGraduate(profile.graduationYear) <= 5 &&
+									{yearsToGraduate(profile.graduationYear) <= 8 &&
 										yearsToGraduate(profile.graduationYear) >= 2 && <PSATWhy />}
 
 									{yearsToGraduate(profile.graduationYear) <= 3 &&

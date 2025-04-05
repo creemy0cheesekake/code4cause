@@ -43,45 +43,82 @@ export const getPriorityTasks = (gradeLevel: string): Task[] => {
 		case "Freshman (9th Grade)":
 			return [
 				{
-					title: "Explore extracurricular activities and clubs",
+					title: "Get adjusted to high school",
 					description:
-						"Find something that you enjoy and could forsee yourself doing for all four years. If possible consider clubs you would like to have a leaderhip role in in the next year or two.",
+						"High school is vastly different from middle school, so it’s important to get acquainted with where you’ll be spending the next four years.",
 					links: [
 						{
-							label: "Benefits of Extracurriculars",
-							url: "https://www.collegevine.com/blog/extracurricular-activities/",
+							label: "Middle School to High School Transition",
+							url: "https://summitlearningcharter.org/about-us/blog/middle-school-to-high-school-transition/",
 						},
 					],
 				},
 				{
-					title: "Develop good study habits",
+					title: "Find extracurriculars",
 					description:
-						"Freshman year sets you up for success or failure. If things don't go well, you can get back, but it's much easier to try your best now and save yourself the trouble later.",
+						"Though you’re early in the process, begin exploring extracurriculars that interest you. Whether it’s Debate or Yearbook Club, find something you’re passionate about — it’ll help you go further and possibly lead to future leadership roles.",
 					links: [
 						{
-							label: "Study Tips for High School",
-							url: "https://www.princetonreview.com/college-advice/high-school-study-tips",
+							label: "Why Extracurriculars Matter",
+							url: "https://bigfuture.collegeboard.org/plan-for-college/stand-out-in-high-school/extracurriculars-matter-to-you-and-to-colleges",
 						},
 					],
 				},
 				{
-					title: "Take challenging courses that interest you",
+					title: "Take honors courses",
 					description:
-						"Honors or AP courses are a great thing to consider, you can also see if you can pursue dual-enrollment at the local community college",
+						"It’s never too early to challenge yourself academically. Enroll in a few honors classes to gain early exposure to more rigorous coursework.",
+					links: [],
+				},
+				{
+					title: "Take the PSAT",
+					description:
+						"The PSAT offers a preview of the SAT and an opportunity to qualify for the National Merit Scholarship. If your school offers it, take advantage of this valuable practice.",
 					links: [
 						{
-							label: "How to Choose High School Courses",
-							url: "https://bigfuture.collegeboard.org/plan-for-college/college-basics/how-to-choose-high-school-courses",
+							label: "Why Take the PSAT/NMSQT",
+							url: "https://satsuite.collegeboard.org/sat-suite-benefits-students-parents/why-take-psat/why-take-psat-nmsqt",
 						},
 					],
 				},
 				{
-					title: "Start thinking about potential career interests",
-					description: "",
+					title: "Consider college-level courses",
+					description:
+						"If you feel ready, look into college-level coursework. You’ll not only challenge yourself but may also earn college credit early. Options include Advanced Placement (AP) or dual-enrollment courses.",
 					links: [
 						{
-							label: "Career Exploration for Teens",
-							url: "https://www.bls.gov/k12/",
+							label: "Benefits of Earning College Credits in High School",
+							url: "https://www.cvtc.edu/news-events/blog/benefits-of-earning-college-credits-in-high-school",
+						},
+						{
+							label: "What is AP?",
+							url: "https://apstudents.collegeboard.org/what-is-ap",
+						},
+						{
+							label: "Dual Enrollment FAQs",
+							url: "https://www.act.org/content/act/en/students-and-parents/high-school-success/high-school-resources/dual-enrollment-faqs.html",
+						},
+					],
+				},
+				{
+					title: "Volunteer in the community",
+					description:
+						"Volunteering is a great way to explore your interests, build leadership skills, and show colleges your commitment to making a difference. Find opportunities through nonprofits, school clubs, and other local organizations.",
+					links: [
+						{
+							label: "Why Volunteering Is Important for High School Students",
+							url: "https://www.medlifemovement.org/medlife-stories/students/why-is-volunteering-important-for-high-school-students/",
+						},
+					],
+				},
+				{
+					title: "Research summer programs",
+					description:
+						"Summer programs allow you to explore college life, meet new people, and deepen your academic interests. From pre-college courses to research and enrichment programs, there’s something for everyone.",
+					links: [
+						{
+							label: "Guide to Summer Programs",
+							url: "https://www.highschoolguidereclaimfee.org/summer-programs-1",
 						},
 					],
 				},
@@ -90,42 +127,89 @@ export const getPriorityTasks = (gradeLevel: string): Task[] => {
 		case "Sophomore (10th Grade)":
 			return [
 				{
-					title: "Take the PSAT for practice",
-					description: "",
-					links: [
-						{
-							label: "PSAT Information",
-							url: "https://satsuite.collegeboard.org/psat-nmsqt",
-						},
-					],
+					title: "Take honors courses",
+					description:
+						"Now that you’re more adjusted to high school, continue challenging yourself academically with honors classes. These courses will help you build a strong foundation for advanced coursework later on.",
+					links: [],
 				},
 				{
-					title: "Research colleges and visit campuses if possible",
-					description: "",
+					title: "Take college-level courses",
+					description:
+						"If you're ready for a greater academic challenge, consider enrolling in Advanced Placement (AP) or dual-enrollment courses. These not only strengthen your college application, but may also earn you college credit — saving time and money.",
 					links: [
 						{
-							label: "How to Research Colleges",
-							url: "https://bigfuture.collegeboard.org/plan-for-college/college-search",
-						},
-					],
-				},
-				{
-					title: "Take AP or honors courses if available",
-					description: "",
-					links: [
-						{
-							label: "Benefits of AP Courses",
+							label: "What is AP?",
 							url: "https://apstudents.collegeboard.org/what-is-ap",
 						},
+						{
+							label: "Dual Enrollment FAQs",
+							url: "https://www.act.org/content/act/en/students-and-parents/high-school-success/high-school-resources/dual-enrollment-faqs.html",
+						},
 					],
 				},
 				{
-					title: "Continue involvement in extracurricular activities",
-					description: "",
+					title: "Begin committing to extracurriculars",
+					description:
+						"Colleges value consistent, long-term involvement. Sophomore year is a great time to start showing sustained commitment to activities you’re passionate about.",
+					links: [],
+				},
+				{
+					title: "Consider founding a club",
+					description:
+						"If you don’t see a club that reflects your interests, create one. Founding a club demonstrates leadership, initiative, and innovation — traits that stand out to colleges.",
 					links: [
 						{
-							label: "Strengthen Your Activities List",
-							url: "https://blog.collegevine.com/extracurricular-activities-list/",
+							label: "How to Start a Club in High School",
+							url: "https://blog.prepscholar.com/how-to-start-a-club-in-high-school",
+						},
+					],
+				},
+				{
+					title: "Take the PSAT",
+					description:
+						"The PSAT is a preview of the SAT and can qualify you for the National Merit Scholarship in your junior year. Use your sophomore year to get comfortable with the test format and content.",
+					links: [],
+				},
+				{
+					title: "Volunteer in the community",
+					description:
+						"Continue engaging with your community through volunteering. It demonstrates empathy, leadership, and social responsibility — all important qualities for college and beyond.",
+					links: [
+						{
+							label: "Why Volunteering Is Important for High School Students",
+							url: "https://www.medlifemovement.org/medlife-stories/students/why-is-volunteering-important-for-high-school-students/",
+						},
+					],
+				},
+				{
+					title: "College visits (if possible)",
+					description:
+						"If feasible, begin visiting college campuses. Campus visits provide valuable insight into a school’s environment and culture, helping you determine where you feel most comfortable.",
+					links: [],
+				},
+				{
+					title: "Research summer programs",
+					description:
+						"Explore summer programs that align with your interests. These programs offer enrichment, exposure to college life, and opportunities to connect with peers from diverse backgrounds.",
+					links: [
+						{
+							label: "Guide to Summer Programs",
+							url: "https://www.highschoolguidereclaimfee.org/summer-programs-1",
+						},
+					],
+				},
+				{
+					title: "Plan for SAT/ACT timing",
+					description:
+						"Start thinking about when you’ll take the SAT or ACT — most students sit for these exams during junior year. Early planning allows time for preparation and retakes if necessary.",
+					links: [
+						{
+							label: "When Should You Take the SAT?",
+							url: "https://blog.collegeboard.org/when-should-you-take-the-sat",
+						},
+						{
+							label: "When to Take the ACT",
+							url: "https://www.act.org/content/act/en/products-and-services/the-act/scores/when-to-take-the-act.html",
 						},
 					],
 				},
@@ -134,53 +218,100 @@ export const getPriorityTasks = (gradeLevel: string): Task[] => {
 		case "Junior (11th Grade)":
 			return [
 				{
-					title: "Prepare for and take the SAT/ACT",
-					description: "",
-					links: [
-						{ label: "SAT Info", url: "https://satsuite.collegeboard.org/sat" },
-						{ label: "ACT Info", url: "https://www.act.org/" },
-					],
+					title: "Take honors courses",
+					description:
+						"Continue challenging yourself with honors-level classes. Maintaining a rigorous course load demonstrates academic dedication and strengthens your college application profile.",
+					links: [],
 				},
 				{
-					title: "Start building your college list",
-					description: "",
+					title: "Take college-level courses",
+					description:
+						"Enroll in Advanced Placement (AP) or Dual Enrollment classes to gain exposure to college-level work and potentially earn college credit. These programs highlight your readiness for advanced academic challenges and may reduce future college costs.",
 					links: [
 						{
-							label: "College Search Tool",
-							url: "https://bigfuture.collegeboard.org/college-search",
+							label: "What is AP?",
+							url: "https://apstudents.collegeboard.org/what-is-ap",
 						},
 						{
-							label: "Niche College Finder",
-							url: "https://www.niche.com/colleges/search/",
-						},
-					],
-				},
-				{
-					title: "Talk to your counselor about college plans",
-					description: "",
-					links: [
-						{
-							label: "How to Talk to Your Counselor",
-							url: "https://www.collegeboard.org/counselor-conversation",
+							label: "Dual Enrollment FAQs",
+							url: "https://www.act.org/content/act/en/students-and-parents/high-school-success/high-school-resources/dual-enrollment-faqs.html",
 						},
 					],
 				},
 				{
-					title: "Take leadership roles in activities",
-					description: "",
+					title: "Consider letters of recommendation",
+					description:
+						"Identify teachers who know you well and can speak to your strengths. Most colleges require at least one letter from a current or recent teacher, so begin cultivating those relationships now.",
 					links: [
 						{
-							label: "Leadership Examples",
-							url: "https://blog.collegevine.com/leadership-examples/",
+							label: "How to Get a Great Letter of Recommendation",
+							url: "https://bigfuture.collegeboard.org/plan-for-college/apply-to-college/application-process/how-to-get-a-great-letter-of-recommendation",
 						},
 					],
 				},
 				{
-					title: "Research scholarship opportunities",
-					description: "",
+					title: "Volunteer in the community",
+					description:
+						"Continue to deepen your engagement with your community. Colleges appreciate students who contribute to society and grow their leadership and interpersonal skills through meaningful service.",
 					links: [
-						{ label: "Fastweb Scholarships", url: "https://www.fastweb.com/" },
-						{ label: "Scholarships.com", url: "https://www.scholarships.com/" },
+						{
+							label: "Why Volunteering Is Important for High School Students",
+							url: "https://www.medlifemovement.org/medlife-stories/students/why-is-volunteering-important-for-high-school-students/",
+						},
+					],
+				},
+				{
+					title: "Take the PSAT",
+					description:
+						"This is the most critical year to take the PSAT, as it can qualify you for the National Merit Scholarship. Your performance can open the door to scholarships and recognition nationwide.",
+					links: [],
+				},
+				{
+					title: "Take the SAT or ACT",
+					description:
+						"Junior year is the ideal time to take your first official SAT or ACT. Early testing gives you flexibility to retake the exam for a better score before application deadlines.",
+					links: [],
+				},
+				{
+					title: "Consider founding a club",
+					description:
+						"If a club aligning with your passions doesn’t yet exist, take initiative and start one. Founding a club reflects leadership, creativity, and commitment—qualities that colleges value highly.",
+					links: [],
+				},
+				{
+					title: "Research colleges",
+					description:
+						"Start researching colleges that align with your interests. Evaluate academics, campus culture, financial aid, and location to build a strong, balanced college list.",
+					links: [
+						{
+							label: "How to Research a College Effectively",
+							url: "https://www.ivywise.com/ivywise-knowledgebase/how-to-research-a-college-effectively/",
+						},
+					],
+				},
+				{
+					title: "Tour colleges",
+					description:
+						"Spring of junior year is the ideal time for campus tours. Visiting in person helps you get a sense of the environment and assess if a school aligns with your goals and personality.",
+					links: [],
+				},
+				{
+					title: "Begin to apply for scholarships",
+					description:
+						"Start searching and applying for scholarships, especially during the summer before senior year. Programs like QuestBridge can provide full-ride opportunities for eligible students. Don’t miss early deadlines!",
+					links: [
+						{
+							label: "Types of Scholarships",
+							url: "https://studentaid.gov/understand-aid/types/scholarships",
+						},
+						{
+							label: "Scholarships.com",
+							url: "https://www.scholarships.com/",
+						},
+						{
+							label: "QuestBridge",
+							url: "https://www.questbridge.org/",
+						},
 					],
 				},
 			];
@@ -188,100 +319,128 @@ export const getPriorityTasks = (gradeLevel: string): Task[] => {
 		case "Senior (12th Grade)":
 			return [
 				{
-					title: "Complete college applications",
-					description: "",
+					title: "Take honors courses",
+					description:
+						"Continue to enroll in honors-level courses to maintain a strong academic record. These courses demonstrate your commitment to academic excellence and prepare you for the rigors of higher education.",
+					links: [],
+				},
+				{
+					title: "Take college-level courses",
+					description:
+						"Continue taking Advanced Placement (AP) or Dual Enrollment courses. These classes provide opportunities to earn college credit while still in high school, demonstrating your preparedness for higher education and potentially reducing your future college expenses.",
 					links: [
-						{ label: "Common App", url: "https://www.commonapp.org/" },
 						{
-							label: "Coalition App",
-							url: "https://www.coalitionforcollegeaccess.org/",
+							label: "What is AP?",
+							url: "https://apstudents.collegeboard.org/what-is-ap",
+						},
+						{
+							label: "Dual Enrollment FAQs",
+							url: "https://www.act.org/content/act/en/students-and-parents/high-school-success/high-school-resources/dual-enrollment-faqs.html",
 						},
 					],
 				},
 				{
-					title: "Apply for financial aid and scholarships",
-					description: "",
+					title: "Obtain letters of recommendation",
+					description:
+						"Reach out to your selected teachers to request letters of recommendation. This process may feel intimidating, but providing ample time (at least a month) and asking early ensures that your recommenders can write strong and thoughtful letters.",
 					links: [
-						{ label: "FAFSA Website", url: "https://studentaid.gov/" },
 						{
-							label: "CSS Profile",
-							url: "https://cssprofile.collegeboard.org/",
+							label: "How to Get a Great Letter of Recommendation",
+							url: "https://bigfuture.collegeboard.org/plan-for-college/apply-to-college/application-process/how-to-get-a-great-letter-of-recommendation",
 						},
 					],
 				},
 				{
-					title: "Confirm final high school transcript is sent to colleges",
-					description: "",
+					title: "Apply for scholarships",
+					description:
+						"Search for and apply to a variety of scholarships, including those based on academic achievement, extracurricular involvement, and financial need. Start early to maximize opportunities and reduce the financial burden of college.",
 					links: [
 						{
-							label: "Final Transcript Checklist",
-							url: "https://bigfuture.collegeboard.org/plan-for-college/applications/final-transcript",
+							label: "Types of Scholarships",
+							url: "https://studentaid.gov/understand-aid/types/scholarships",
 						},
 					],
 				},
 				{
-					title: "Make your college decision",
-					description: "",
+					title: "College visit (Part Two)",
+					description:
+						"Now is the time to revisit the colleges on your shortlist. Participate in campus tours, attend classes, and talk with current students to gauge if a school is the right fit for you.",
+					links: [],
+				},
+				{
+					title: "Fill out Common App",
+					description:
+						"The Common Application allows you to apply to multiple colleges with one streamlined process. Complete your personal information, list extracurricular activities, write your personal statement, and add colleges to your list. Be sure to stay organized and meet all application deadlines.",
 					links: [
 						{
-							label: "How to Choose a College",
-							url: "https://bigfuture.collegeboard.org/plan-for-college/college-basics/deciding-where-to-go",
+							label: "Common App Website",
+							url: "https://www.commonapp.org/",
+						},
+						{
+							label: "Common App for First-Year Students",
+							url: "https://www.commonapp.org/apply/first-year-students",
 						},
 					],
 				},
 				{
-					title: "Prepare for the transition to college",
-					description: "",
+					title: "Fill out FAFSA",
+					description:
+						"Complete the Free Application for Federal Student Aid (FAFSA) as early as possible to be considered for federal aid, including grants, scholarships, and work-study programs. Be sure to have your family's financial details ready.",
 					links: [
 						{
-							label: "College Transition Guide",
-							url: "https://www.nacacnet.org/news--publications/publications/step-by-step-college-transition/",
+							label: "FAFSA Information",
+							url: "https://studentaid.gov/",
+						},
+						{
+							label: "How to Fill Out FAFSA",
+							url: "https://studentaid.gov/apply-for-aid/fafsa/filling-out",
 						},
 					],
+				},
+				{
+					title: "Submit applications (by November, ideally)",
+					description:
+						"Submit your college applications well in advance of their deadlines. Early Decision (ED) and Early Action (EA) applications are typically due in November, while Regular Decision deadlines generally fall in January. Be mindful of the deadlines for each school on your list.",
+					links: [],
 				},
 			];
 
 		case "Middle School":
 			return [
 				{
-					title: "Focus on building strong academic foundations",
-					description: "",
-					links: [
-						{
-							label: "Middle School Academics",
-							url: "https://kidshealth.org/en/kids/school.html",
-						},
-					],
+					title: "Enjoy life",
+					description: "Enjoy your life as a middle schooler! Don’t stress about college just yet.",
+					links: [],
 				},
 				{
-					title: "Explore various interests through activities",
-					description: "",
-					links: [
-						{
-							label: "Middle School Clubs",
-							url: "https://www.weareteachers.com/extracurricular-activities-middle-school/",
-						},
-					],
+					title: "Explore interests",
+					description:
+						"Join clubs or extracurriculars that speak to you. There’s no harm in trying new things out! If you find something you enjoy, you could continue into high school.",
+					links: [],
 				},
 				{
-					title: "Develop good study habits",
-					description: "",
-					links: [
-						{
-							label: "Study Tips for Middle Schoolers",
-							url: "https://www.greatschools.org/gk/articles/10-ways-to-help-your-child-succeed-in-middle-school/",
-						},
-					],
+					title: "Hone academic skills",
+					description:
+						"Although colleges don’t take middle school grades into account, it’s important to set a good foundation for high school. Being in more advanced classes in middle school can also allow you to take advanced classes from the start in high school.",
+					links: [],
 				},
 				{
-					title: "Read widely across subjects",
-					description: "",
-					links: [
-						{
-							label: "Reading Lists for Teens",
-							url: "https://www.readbrightly.com/100-must-read-books-for-tweens-and-teens/",
-						},
-					],
+					title: "Take a foreign language, if possible",
+					description:
+						"Many colleges have high school foreign language credit requirements. Beginning in middle school can help you meet those expectations and set you up to take AP or dual-enrollment courses in high school.",
+					links: [],
+				},
+				{
+					title: "Consider high school classes",
+					description:
+						"Try challenging yourself with high-school level courses! It’s great preparation as you’ll get early exposure to the rigor of high school academics.",
+					links: [],
+				},
+				{
+					title: "Consider dual-enrollment",
+					description:
+						"Though not required, if you're looking for an additional challenge, consider dual enrollment at your local community college.",
+					links: [],
 				},
 			];
 
