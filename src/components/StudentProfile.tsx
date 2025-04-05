@@ -76,15 +76,15 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ onProfileUpdate, initPr
 					<div className="space-y-2 text-left mb-4">
 						<div className="flex justify-between">
 							<span className="text-muted-foreground">Graduation Year:</span>
-							<span className="font-medium">{graduationYear}</span>
+							<span className="font-medium text-right">{graduationYear}</span>
 						</div>
 						<div className="flex justify-between">
 							<span className="text-muted-foreground">Location:</span>
-							<span className="font-medium">{initProfile.location}</span>
+							<span className="font-medium text-right">{initProfile.location}</span>
 						</div>
 						<div className="flex justify-between">
 							<span className="text-muted-foreground">Interests:</span>
-							<span className="font-medium">{selectedInterests.join(", ")}</span>
+							<span className="font-medium text-right">{selectedInterests.join(", ")}</span>
 						</div>
 					</div>
 
