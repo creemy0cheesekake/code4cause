@@ -25,8 +25,8 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ onProfileUpdate, initPr
 	const [location, setLocation] = useState<string>("");
 	const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
 	const [formCompleted, setFormCompleted] = useState<boolean>(false);
-	const [possibleCities, setPossibleCities] = React.useState<[string]>();
-	const [cityInput, setCityInput] = React.useState<[string]>();
+	const [possibleCities, setPossibleCities] = React.useState<string[]>();
+	const [cityInput, setCityInput] = React.useState<string>();
 
 	useEffect(() => {
 		if (initProfile) {
