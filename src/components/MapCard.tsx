@@ -8,7 +8,7 @@ import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L, { LatLngExpression } from "leaflet";
 
-export default function MapCard() {
+const MapCard = ({ profile }) => {
 	const locations = [
 		{ id: 1, lat: 51.505, lon: -0.09, name: "Location 1" },
 		{ id: 2, lat: 51.515, lon: -0.1, name: "Location 2" },
@@ -43,4 +43,6 @@ export default function MapCard() {
 			</Card>
 		</section>
 	);
-}
+};
+
+export default MapCard;
