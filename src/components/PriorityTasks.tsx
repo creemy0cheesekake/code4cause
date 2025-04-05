@@ -1,17 +1,6 @@
 import React from "react";
-import {
-	Accordion,
-	AccordionItem,
-	AccordionTrigger,
-	AccordionContent,
-} from "@/components/ui/accordion";
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { calculateGradeLevel, getPriorityTasks } from "../lib/helpers";
 import { CheckCircle } from "lucide-react";
@@ -19,7 +8,7 @@ import { CheckCircle } from "lucide-react";
 interface DashboardProps {
 	profile: {
 		graduationYear: number;
-		location: string;
+		location: { city: string; lat: number; lng: number };
 		interests: string[];
 	};
 }
@@ -51,7 +40,8 @@ const PriorityTasks: React.FC<DashboardProps> = ({ profile }) => {
 													href={link.url}
 													className="text-blue-600 underline hover:text-blue-800"
 													target="_blank"
-													rel="noopener noreferrer">
+													rel="noopener noreferrer"
+												>
 													{link.label}
 												</a>
 											</li>
