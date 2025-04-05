@@ -23,8 +23,10 @@ const MapCard = ({ profile }) => {
 			<Card className="flex flex-col gap-4 p-6 shadow-md bg-muted/30">
 				<div className="flex items-start gap-4">
 					<div style={{ height: "100%", width: "100%" }}>
-						<CardTitle className="text-xl font-semibold">Map</CardTitle>
-						<CardDescription className="text-sm text-muted-foreground mt-1">Map of stuf</CardDescription>
+						<CardTitle className="text-xl font-semibold">{profile.location.city}</CardTitle>
+						<CardDescription className="text-sm text-muted-foreground mt-1">
+							Volunteering Opportunities
+						</CardDescription>
 
 						<MapContainer
 							// dont question it, it works
@@ -33,6 +35,7 @@ const MapCard = ({ profile }) => {
 							zoom={zoom}
 							scrollWheelZoom={false}
 							style={{ height: 250 }}
+							className="z-0"
 						>
 							<TileLayer
 								attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
