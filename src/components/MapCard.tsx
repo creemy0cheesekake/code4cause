@@ -30,11 +30,13 @@ export default function MapCard() {
 								attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 								url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 							/>
-							<Marker position={[51.505, -0.09]}>
-								<Popup>
-									A pretty CSS3 popup. <br /> Easily customizable.
-								</Popup>
-							</Marker>
+							{locations.map((loc, i) => {
+								return (
+									<Marker position={[loc.lat, loc.lon]} key={i}>
+										<Popup>{name}</Popup>
+									</Marker>
+								);
+							})}
 						</MapContainer>
 					</div>
 				</div>

@@ -48,7 +48,7 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ onProfileUpdate, initPr
 		if (graduationYear && cityInput && selectedInterests.length > 0) {
 			onProfileUpdate({
 				graduationYear,
-				cityInput,
+				location: cityInput,
 				interests: selectedInterests,
 			});
 			setFormCompleted(true);
@@ -80,7 +80,7 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ onProfileUpdate, initPr
 						</div>
 						<div className="flex justify-between">
 							<span className="text-muted-foreground">Location:</span>
-							<span className="font-medium">{location}</span>
+							<span className="font-medium">{initProfile.location}</span>
 						</div>
 						<div className="flex justify-between">
 							<span className="text-muted-foreground">Interests:</span>
