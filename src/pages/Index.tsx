@@ -12,6 +12,7 @@ import CommonAppInfoCard from "@/components/CommonAppInfoCard";
 import CompetitionsCard from "@/components/CompetitionsCard";
 import DualEnrollmentCard from "@/components/DualEnrollmentCard";
 import VolunteeringCard from "@/components/VolunteeringCard";
+import FAQFooter from "@/components/FAQFooter";
 
 import { yearsToGraduate } from "../lib/helpers";
 
@@ -84,14 +85,7 @@ const Index: React.FC = () => {
 				</div>
 			</main>
 
-			{/* <footer className="bg-white border-t border-border py-6">
-				<div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-					<p>© 2025 Pathway Partner. All rights reserved.</p>
-					<p className="mt-1">
-						Helping students navigate their educational journey.
-					</p>
-				</div>
-			</footer> */}
+			<FAQFooter /> 
 		</div>
 	);
 };
