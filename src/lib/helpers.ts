@@ -300,9 +300,7 @@ export const getPriorityTasks = (gradeLevel: string): Task[] => {
 				{
 					title: "Consider internship or job opportunities",
 					description: "",
-					links: [
-						{ label: "Find Internships", url: "https://www.internships.com/" },
-					],
+					links: [{ label: "Find Internships", url: "https://www.internships.com/" }],
 				},
 				{
 					title: "Network with professionals in your field of interest",
@@ -319,11 +317,7 @@ export const getPriorityTasks = (gradeLevel: string): Task[] => {
 };
 
 // Get recommended colleges based on interests and location
-export const getCollegeRecommendations = (
-	interests: string[],
-	location: string,
-	gradeLevel: string
-): any[] => {
+export const getCollegeRecommendations = (interests: string[], location: string, gradeLevel: string): any[] => {
 	// Only show college recommendations for high school students
 	if (!gradeLevel.includes("Grade")) {
 		return [];
@@ -333,43 +327,187 @@ export const getCollegeRecommendations = (
 	// For now, we'll return some sample data
 	const sampleColleges = [
 		{
-			name: "University of Technology",
-			location: "West Coast",
-			strongPrograms: ["Computer Science", "Engineering", "Technology"],
-			admissionRate: "15%",
+			name: "Massachusetts Institute of Technology",
+			location: "Cambridge, MA",
+			strongPrograms: ["Computer Science", "Engineering", "Mathematics"],
+			admissionRate: "4%",
+			averageSAT: 1540,
+		},
+		{
+			name: "Stanford University",
+			location: "Stanford, CA",
+			strongPrograms: ["Engineering", "Computer Science", "Business"],
+			admissionRate: "4%",
+			averageSAT: 1520,
+		},
+		{
+			name: "Harvard University",
+			location: "Cambridge, MA",
+			strongPrograms: ["Social Sciences", "Biology", "Medicine"],
+			admissionRate: "4%",
+			averageSAT: 1520,
+		},
+		{
+			name: "California Institute of Technology",
+			location: "Pasadena, CA",
+			strongPrograms: ["Engineering", "Technology", "Mathematics"],
+			admissionRate: "6%",
+			averageSAT: 1550,
+		},
+		{
+			name: "University of California, Berkeley",
+			location: "Berkeley, CA",
+			strongPrograms: ["Computer Science", "Economics", "Engineering"],
+			admissionRate: "11%",
+			averageSAT: 1455,
+		},
+		{
+			name: "University of Pennsylvania",
+			location: "Philadelphia, PA",
+			strongPrograms: ["Finance", "Business", "Economics"],
+			admissionRate: "6%",
+			averageSAT: 1500,
+		},
+		{
+			name: "Princeton University",
+			location: "Princeton, NJ",
+			strongPrograms: ["Mathematics", "Humanities", "Engineering"],
+			admissionRate: "4%",
+			averageSAT: 1505,
+		},
+		{
+			name: "Yale University",
+			location: "New Haven, CT",
+			strongPrograms: ["Social Sciences", "Humanities", "Arts"],
+			admissionRate: "5%",
+			averageSAT: 1500,
+		},
+		{
+			name: "University of Michigan",
+			location: "Ann Arbor, MI",
+			strongPrograms: ["Engineering", "Business", "Health Sciences"],
+			admissionRate: "20%",
+			averageSAT: 1435,
+		},
+		{
+			name: "Duke University",
+			location: "Durham, NC",
+			strongPrograms: ["Biology", "Medicine", "Social Sciences"],
+			admissionRate: "6%",
+			averageSAT: 1490,
+		},
+		{
+			name: "Columbia University",
+			location: "New York, NY",
+			strongPrograms: ["Humanities", "Social Sciences", "Engineering"],
+			admissionRate: "4%",
+			averageSAT: 1505,
+		},
+		{
+			name: "University of Chicago",
+			location: "Chicago, IL",
+			strongPrograms: ["Economics", "Social Sciences", "Mathematics"],
+			admissionRate: "6%",
+			averageSAT: 1530,
+		},
+		{
+			name: "Northwestern University",
+			location: "Evanston, IL",
+			strongPrograms: ["Business", "Social Sciences", "Arts"],
+			admissionRate: "7%",
+			averageSAT: 1495,
+		},
+		{
+			name: "Cornell University",
+			location: "Ithaca, NY",
+			strongPrograms: ["Engineering", "Biology", "Business"],
+			admissionRate: "9%",
+			averageSAT: 1480,
+		},
+		{
+			name: "University of Southern California",
+			location: "Los Angeles, CA",
+			strongPrograms: ["Arts", "Business", "Technology"],
+			admissionRate: "12%",
 			averageSAT: 1450,
 		},
 		{
-			name: "State Liberal Arts College",
-			location: "Midwest",
-			strongPrograms: ["Arts", "Humanities", "Social Sciences"],
-			admissionRate: "45%",
-			averageSAT: 1320,
+			name: "University of North Carolina at Chapel Hill",
+			location: "Chapel Hill, NC",
+			strongPrograms: ["Health Sciences", "Social Sciences", "Humanities"],
+			admissionRate: "19%",
+			averageSAT: 1395,
 		},
 		{
-			name: "Business Institute",
-			location: "Northeast",
-			strongPrograms: ["Business", "Economics", "Finance"],
-			admissionRate: "25%",
-			averageSAT: 1380,
+			name: "University of Texas at Austin",
+			location: "Austin, TX",
+			strongPrograms: ["Engineering", "Computer Science", "Business"],
+			admissionRate: "29%",
+			averageSAT: 1370,
 		},
 		{
-			name: "Medical Sciences University",
-			location: "Southeast",
-			strongPrograms: ["Biology", "Health Sciences", "Medicine"],
-			admissionRate: "20%",
+			name: "Georgia Institute of Technology",
+			location: "Atlanta, GA",
+			strongPrograms: ["Computer Science", "Engineering", "Technology"],
+			admissionRate: "17%",
+			averageSAT: 1460,
+		},
+		{
+			name: "New York University",
+			location: "New York, NY",
+			strongPrograms: ["Arts", "Business", "Social Sciences"],
+			admissionRate: "13%",
+			averageSAT: 1450,
+		},
+		{
+			name: "Brown University",
+			location: "Providence, RI",
+			strongPrograms: ["Humanities", "Biology", "Social Sciences"],
+			admissionRate: "5%",
+			averageSAT: 1485,
+		},
+		{
+			name: "University of Washington",
+			location: "Seattle, WA",
+			strongPrograms: ["Computer Science", "Health Sciences", "Engineering"],
+			admissionRate: "48%",
+			averageSAT: 1340,
+		},
+		{
+			name: "University of Wisconsin-Madison",
+			location: "Madison, WI",
+			strongPrograms: ["Biology", "Engineering", "Mathematics"],
+			admissionRate: "49%",
+			averageSAT: 1345,
+		},
+		{
+			name: "University of Florida",
+			location: "Gainesville, FL",
+			strongPrograms: ["Health Sciences", "Engineering", "Social Sciences"],
+			admissionRate: "30%",
+			averageSAT: 1375,
+		},
+		{
+			name: "Boston University",
+			location: "Boston, MA",
+			strongPrograms: ["Business", "Health Sciences", "Social Sciences"],
+			admissionRate: "19%",
 			averageSAT: 1420,
 		},
+		{
+			name: "Indiana University Bloomington",
+			location: "Bloomington, IN",
+			strongPrograms: ["Business", "Finance", "Social Sciences"],
+			admissionRate: "80%",
+			averageSAT: 1300,
+		},
 	];
-
 	// Filter based on user interests
 	return sampleColleges
-		.filter((college) => {
+		.filter(college => {
 			return interests.some(
-				(interest) =>
-					college.strongPrograms.includes(interest) ||
-					college.location.includes(location)
+				interest => college.strongPrograms.includes(interest) || college.location.includes(location),
 			);
 		})
-		.slice(0, 3); // Limit to 3 recommendations
+		.slice(0, 6); // Limit to 3 recommendations
 };
