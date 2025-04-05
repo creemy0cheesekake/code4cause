@@ -10,6 +10,8 @@ import PriorityTasks from "@/components/PriorityTasks";
 import OtherTestsInfoCard from "@/components/OtherTestsInfoCard";
 import CommonAppInfoCard from "@/components/CommonAppInfoCard";
 import CompetitionsCard from "@/components/CompetitionsCard";
+import DualEnrollmentCard from "@/components/DualEnrollmentCard";
+import VolunteeringCard from "@/components/VolunteeringCard";
 
 import { yearsToGraduate } from "../lib/helpers";
 
@@ -67,8 +69,15 @@ const Index: React.FC = () => {
 									)}
 
 								<Dashboard profile={profile} />
+
+								{yearsToGraduate(profile.graduationYear) <= 5 &&
+									yearsToGraduate(profile.graduationYear) >= 0 && <DualEnrollmentCard />}
+
+								{yearsToGraduate(profile.graduationYear) <= 5 &&
+									yearsToGraduate(profile.graduationYear) >= 0 && <VolunteeringCard />}
+
 								<CollegeExplorer profile={profile} />
-								<MapCard profile={profile} />
+								{/* <MapCard profile={profile} /> */}
 							</div>
 						</div>
 					)}
