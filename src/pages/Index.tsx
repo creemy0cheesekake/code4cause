@@ -86,8 +86,8 @@ const Index: React.FC = () => {
 									{yearsToGraduate(profile.graduationYear) <= 5 &&
 										yearsToGraduate(profile.graduationYear) >= 0 && <DualEnrollmentCard />}
 
-									{yearsToGraduate(profile.graduationYear) <= 5 &&
-										yearsToGraduate(profile.graduationYear) >= 0 && <VolunteeringCard />}
+									{/* {yearsToGraduate(profile.graduationYear) <= 5 &&
+										yearsToGraduate(profile.graduationYear) >= 0 && <VolunteeringCard />} */}
 
 									<CollegeExplorer profile={profile} />
 
