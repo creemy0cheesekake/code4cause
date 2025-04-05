@@ -13,6 +13,7 @@ import CompetitionsCard from "@/components/CompetitionsCard";
 import DualEnrollmentCard from "@/components/DualEnrollmentCard";
 import VolunteeringCard from "@/components/VolunteeringCard";
 import FAQFooter from "@/components/FAQFooter";
+import APSuggestionsCard from "@/components/APSuggestionsCard";
 
 import { yearsToGraduate } from "../lib/helpers";
 
@@ -63,6 +64,11 @@ const Index: React.FC = () => {
 
 								{yearsToGraduate(profile.graduationYear) <= 5 &&
 									yearsToGraduate(profile.graduationYear) >= 2 && <PSATWhy />}
+
+								{yearsToGraduate(profile.graduationYear) <= 3 &&
+									yearsToGraduate(profile.graduationYear) >= 0 && (
+										<APSuggestionsCard profile={profile} />
+									)}
 
 								{yearsToGraduate(profile.graduationYear) <= 5 &&
 									yearsToGraduate(profile.graduationYear) >= 0 && (

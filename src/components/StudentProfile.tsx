@@ -86,9 +86,15 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ onProfileUpdate, initPr
 							<span className="text-muted-foreground">Location:</span>
 							<span className="font-medium text-right">{initProfile.location.city}</span>
 						</div>
-						<div className="flex justify-between">
+						<div className="flex justify-between items-start">
 							<span className="text-muted-foreground">Interests:</span>
-							<span className="font-medium text-right">{selectedInterests.join(", ")}</span>
+							<div className="flex flex-col items-end text-edu-green">
+								{selectedInterests.map((interest, index) => (
+									<span key={index} className="font-medium text-right">
+										{interest}
+									</span>
+								))}
+							</div>
 						</div>
 					</div>
 

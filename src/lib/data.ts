@@ -14,6 +14,97 @@ export const academicInterests = [
 	"Social Sciences",
 	"Technology",
 ];
+// lib/data.ts
+
+export const apClassesByInterest: Record<string, { name: string; url: string }[]> = {
+	Arts: [
+		{ name: "AP Art History", url: "https://apstudents.collegeboard.org/courses/ap-art-history" },
+		{ name: "AP Music Theory", url: "https://apstudents.collegeboard.org/courses/ap-music-theory" },
+		{ name: "AP 2-D Art and Design", url: "https://apstudents.collegeboard.org/courses/ap-2-d-art-and-design" },
+	],
+	Biology: [
+		{ name: "AP Biology", url: "https://apstudents.collegeboard.org/courses/ap-biology" },
+		{
+			name: "AP Environmental Science",
+			url: "https://apstudents.collegeboard.org/courses/ap-environmental-science",
+		},
+	],
+	Business: [
+		{ name: "AP Macroeconomics", url: "https://apstudents.collegeboard.org/courses/ap-macroeconomics" },
+		{ name: "AP Microeconomics", url: "https://apstudents.collegeboard.org/courses/ap-microeconomics" },
+		{ name: "AP Statistics", url: "https://apstudents.collegeboard.org/courses/ap-statistics" },
+	],
+	"Computer Science": [
+		{ name: "AP Computer Science A", url: "https://apstudents.collegeboard.org/courses/ap-computer-science-a" },
+		{
+			name: "AP Computer Science Principles",
+			url: "https://apstudents.collegeboard.org/courses/ap-computer-science-principles",
+		},
+	],
+	Economics: [
+		{ name: "AP Microeconomics", url: "https://apstudents.collegeboard.org/courses/ap-microeconomics" },
+		{ name: "AP Macroeconomics", url: "https://apstudents.collegeboard.org/courses/ap-macroeconomics" },
+	],
+	Engineering: [
+		{ name: "AP Physics C: Mechanics", url: "https://apstudents.collegeboard.org/courses/ap-physics-c-mechanics" },
+		{ name: "AP Calculus BC", url: "https://apstudents.collegeboard.org/courses/ap-calculus-bc" },
+		{ name: "AP Computer Science A", url: "https://apstudents.collegeboard.org/courses/ap-computer-science-a" },
+	],
+	Finance: [
+		{ name: "AP Statistics", url: "https://apstudents.collegeboard.org/courses/ap-statistics" },
+		{ name: "AP Macroeconomics", url: "https://apstudents.collegeboard.org/courses/ap-macroeconomics" },
+		{ name: "AP Microeconomics", url: "https://apstudents.collegeboard.org/courses/ap-microeconomics" },
+	],
+	"Health Sciences": [
+		{ name: "AP Biology", url: "https://apstudents.collegeboard.org/courses/ap-biology" },
+		{ name: "AP Psychology", url: "https://apstudents.collegeboard.org/courses/ap-psychology" },
+		{ name: "AP Chemistry", url: "https://apstudents.collegeboard.org/courses/ap-chemistry" },
+	],
+	Humanities: [
+		{
+			name: "AP World History: Modern",
+			url: "https://apstudents.collegeboard.org/courses/ap-world-history-modern",
+		},
+		{
+			name: "AP United States History",
+			url: "https://apstudents.collegeboard.org/courses/ap-united-states-history",
+		},
+		{ name: "AP Human Geography", url: "https://apstudents.collegeboard.org/courses/ap-human-geography" },
+		{
+			name: "AP English Literature and Composition",
+			url: "https://apstudents.collegeboard.org/courses/ap-english-literature-and-composition",
+		},
+	],
+	Mathematics: [
+		{ name: "AP Calculus AB", url: "https://apstudents.collegeboard.org/courses/ap-calculus-ab" },
+		{ name: "AP Calculus BC", url: "https://apstudents.collegeboard.org/courses/ap-calculus-bc" },
+		{ name: "AP Statistics", url: "https://apstudents.collegeboard.org/courses/ap-statistics" },
+	],
+	Medicine: [
+		{ name: "AP Biology", url: "https://apstudents.collegeboard.org/courses/ap-biology" },
+		{ name: "AP Chemistry", url: "https://apstudents.collegeboard.org/courses/ap-chemistry" },
+		{ name: "AP Psychology", url: "https://apstudents.collegeboard.org/courses/ap-psychology" },
+	],
+	"Social Sciences": [
+		{ name: "AP Psychology", url: "https://apstudents.collegeboard.org/courses/ap-psychology" },
+		{
+			name: "AP United States Government and Politics",
+			url: "https://apstudents.collegeboard.org/courses/ap-united-states-government-and-politics",
+		},
+		{
+			name: "AP Comparative Government and Politics",
+			url: "https://apstudents.collegeboard.org/courses/ap-comparative-government-and-politics",
+		},
+	],
+	Technology: [
+		{ name: "AP Computer Science A", url: "https://apstudents.collegeboard.org/courses/ap-computer-science-a" },
+		{
+			name: "AP Computer Science Principles",
+			url: "https://apstudents.collegeboard.org/courses/ap-computer-science-principles",
+		},
+		{ name: "AP Physics C: Mechanics", url: "https://apstudents.collegeboard.org/courses/ap-physics-c-mechanics" },
+	],
+};
 
 // US Regions
 export const regions = ["Northeast", "Southeast", "Midwest", "Southwest", "West Coast", "Northwest", "Other"];
