@@ -95,8 +95,13 @@ const MapCard = ({ profile }) => {
 						</MapContainer>
 					</div>
 				</div>
-
-				<div className="flex gap-3 mt-2 items-center"></div>
+				{locations.map((el, i) => {
+					return (
+						<p>
+							<strong>{el.name}</strong> - {(Math.random() * 10).toFixed(1)} miles away
+						</p>
+					);
+				})}
 			</Card>
 		</section>
 	);
