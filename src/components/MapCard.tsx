@@ -9,13 +9,16 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L, { LatLngExpression } from "leaflet";
 
 const MapCard = ({ profile }) => {
+	const center: LatLngExpression = [profile.location.lat, profile.location.lng];
+
+	const randomOffset = () => 0.05 * Math.random() * (Math.random() < 0.5 ? -1 : 1);
+	console.log(center);
 	const locations = [
-		{ id: 1, lat: 51.505, lon: -0.09, name: "Location 1" },
-		{ id: 2, lat: 51.515, lon: -0.1, name: "Location 2" },
-		{ id: 3, lat: 51.525, lon: -0.11, name: "Location 3" },
+		{ id: 1, lat: center[0] + randomOffset(), lon: center[1] + randomOffset(), name: "Location 1" },
+		{ id: 2, lat: center[0] + randomOffset(), lon: center[1] + randomOffset(), name: "Location 2" },
+		{ id: 3, lat: center[0] + randomOffset(), lon: center[1] + randomOffset(), name: "Location 3" },
 	];
-	const [center, setCenter] = useState<LatLngExpression>([51.505, -0.09]); // Initial center of the map
-	const zoom = 13; // Initial zoom level
+	const zoom = 12;
 
 	return (
 		<section className="space-y-6">
@@ -33,7 +36,7 @@ const MapCard = ({ profile }) => {
 							{locations.map((loc, i) => {
 								return (
 									<Marker position={[loc.lat, loc.lon]} key={i}>
-										<Popup>{name}</Popup>
+										<Popup>{loc.name}</Popup>
 									</Marker>
 								);
 							})}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { regions, academicInterests, getGraduationYears, cityList } from "../lib/data";
+import { regions, academicInterests, getGraduationYears } from "../lib/data";
+import cities_db from "../lib/cities_db.json";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { InputAutocomplete } from "@/components/ui/input-autocomplete";
@@ -11,7 +12,7 @@ import { profile } from "console";
 
 interface StudentProfileData {
 	graduationYear: number;
-	location: string;
+	location: { city: string; lat: number; lng: number };
 	interests: string[];
 }
 
@@ -21,6 +22,8 @@ interface StudentProfileProps {
 }
 
 const StudentProfile: React.FC<StudentProfileProps> = ({ onProfileUpdate, initProfile = null }) => {
+	const cityList = cities_db.data.map(entry => entry.city);
+
 	const [graduationYear, setGraduationYear] = useState<number | null>(null);
 	const [location, setLocation] = useState<string>("");
 	const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
@@ -48,7 +51,7 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ onProfileUpdate, initPr
 		if (graduationYear && cityInput && selectedInterests.length > 0) {
 			onProfileUpdate({
 				graduationYear,
-				location: cityInput,
+				location: cities_db.data.filter(el => el.city == cityInput)[0],
 				interests: selectedInterests,
 			});
 			setFormCompleted(true);
@@ -68,6 +71,7 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ onProfileUpdate, initPr
 	};
 
 	if (formCompleted) {
+		console.log(initProfile.location);
 		return (
 			<Card className="bg-white p-6 rounded-lg border border-border shadow-sm">
 				<div className="text-center">
@@ -80,7 +84,7 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ onProfileUpdate, initPr
 						</div>
 						<div className="flex justify-between">
 							<span className="text-muted-foreground">Location:</span>
-							<span className="font-medium text-right">{initProfile.location}</span>
+							<span className="font-medium text-right">{initProfile.location.city}</span>
 						</div>
 						<div className="flex justify-between">
 							<span className="text-muted-foreground">Interests:</span>
