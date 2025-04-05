@@ -78,14 +78,14 @@ const Index: React.FC = () => {
 									yearsToGraduate(profile.graduationYear) >= 0 && <VolunteeringCard />}
 
 								<CollegeExplorer profile={profile} />
-								{/* <MapCard profile={profile} /> */}
+								<MapCard profile={profile} />
 							</div>
 						</div>
 					)}
 				</div>
 			</main>
 
-			<FAQFooter /> 
+			<FAQFooter />
 		</div>
 	);
 };

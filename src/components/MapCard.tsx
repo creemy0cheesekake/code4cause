@@ -6,7 +6,7 @@ import { BookOpenCheck } from "lucide-react";
 import "leaflet/dist/leaflet.css";
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import L from "leaflet";
+import L, { LatLngExpression } from "leaflet";
 
 export default function MapCard() {
 	const locations = [
@@ -14,7 +14,7 @@ export default function MapCard() {
 		{ id: 2, lat: 51.515, lon: -0.1, name: "Location 2" },
 		{ id: 3, lat: 51.525, lon: -0.11, name: "Location 3" },
 	];
-	const [center, setCenter] = useState([51.505, -0.09]); // Initial center of the map
+	const [center, setCenter] = useState<LatLngExpression>([51.505, -0.09]); // Initial center of the map
 	const zoom = 13; // Initial zoom level
 
 	return (
@@ -25,7 +25,7 @@ export default function MapCard() {
 						<CardTitle className="text-xl font-semibold">Map</CardTitle>
 						<CardDescription className="text-sm text-muted-foreground mt-1">Map of stuf</CardDescription>
 
-						<MapContainer center={center} zoom={zoom} scrollWheelZoom={false}>
+						<MapContainer center={center} zoom={zoom} scrollWheelZoom={false} style={{ height: 250 }}>
 							<TileLayer
 								attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 								url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
