@@ -1,11 +1,5 @@
 import React from "react";
 import {
-	Accordion,
-	AccordionItem,
-	AccordionTrigger,
-	AccordionContent,
-} from "@/components/ui/accordion";
-import {
 	Card,
 	CardContent,
 	CardDescription,
@@ -15,7 +9,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { calculateGradeLevel, getPriorityTasks } from "../lib/helpers";
 import { milestones } from "../lib/data";
-import { CheckCircle } from "lucide-react";
+import { DollarSign, FileText, GraduationCap } from "lucide-react";
 
 interface DashboardProps {
 	profile: {
@@ -34,77 +28,134 @@ const Dashboard: React.FC<DashboardProps> = ({ profile }) => {
 
 	return (
 		<div className="space-y-6 animate-fade-in">
-			<Tabs defaultValue="academics" className="w-full">
-				<TabsList className="grid grid-cols-3 mb-4">
-					<TabsTrigger value="academics">Academics</TabsTrigger>
-					<TabsTrigger value="extracurricular">Activities</TabsTrigger>
-					<TabsTrigger value="collegePrep">College Prep</TabsTrigger>
+			<Tabs defaultValue="fafsa" className="w-full">
+				<TabsList className="grid grid-cols-2 mb-4">
+					<TabsTrigger value="fafsa">FAFSA</TabsTrigger>
+					<TabsTrigger value="scholarships">Scholarships</TabsTrigger>
 				</TabsList>
 
-				<TabsContent value="academics" className="space-y-4">
+				<TabsContent
+					value="fafsa"
+					className="animate-fade-in space-y-4 transition-opacity duration-500">
 					<Card>
 						<CardHeader>
-							<CardTitle>Academic Milestones</CardTitle>
+							<CardTitle>FAFSA Resources</CardTitle>
 							<CardDescription>
-								Key academic goals for {gradeLevel} students
+								Get started with the Free Application for Federal Student Aid.
+								Submitting early improves your chances of receiving grants and
+								institutional aid.
 							</CardDescription>
 						</CardHeader>
 						<CardContent>
-							<ul className="space-y-2">
-								{gradeMilestones.academics.map((item, index) => (
-									<li key={index} className="flex items-start gap-2">
-										<div className="h-6 w-6 rounded-full bg-edu-blue-light flex items-center justify-center text-edu-blue font-medium shrink-0">
-											{index + 1}
-										</div>
-										<span>{item}</span>
-									</li>
-								))}
+							<ul className="list-disc list-inside space-y-2 text-muted-foreground text-sm">
+								<li>
+									<a
+										href="https://studentaid.gov/fsa-id/create-account"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="hover:underline">
+										Create your FSA ID
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://studentaid.gov/apply-for-aid/fafsa/filling-out"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="hover:underline">
+										What you need to fill out the FAFSA
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://studentaid.gov/h/apply-for-aid/fafsa"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="hover:underline">
+										Submit the FAFSA (application form)
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://studentaid.gov/help/how-sign-fafsa"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="hover:underline">
+										How to sign and submit your FAFSA
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://studentaid.gov/apply-for-aid/fafsa/review-and-correct"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="hover:underline">
+										Review and correct your FAFSA
+									</a>
+								</li>
 							</ul>
 						</CardContent>
 					</Card>
 				</TabsContent>
 
-				<TabsContent value="extracurricular" className="space-y-4">
+				<TabsContent
+					value="scholarships"
+					className="animate-fade-in space-y-4 transition-opacity duration-500">
 					<Card>
 						<CardHeader>
-							<CardTitle>Extracurricular Activities</CardTitle>
+							<CardTitle>Scholarship Resources</CardTitle>
 							<CardDescription>
-								Recommended activities for {gradeLevel} students
+								Explore scholarships that match your academic, extracurricular,
+								and personal profile. Apply early and often to maximize aid.
 							</CardDescription>
 						</CardHeader>
 						<CardContent>
-							<ul className="space-y-2">
-								{gradeMilestones.extracurricular.map((item, index) => (
-									<li key={index} className="flex items-start gap-2">
-										<div className="h-6 w-6 rounded-full bg-edu-yellow-light flex items-center justify-center text-edu-yellow font-medium shrink-0">
-											{index + 1}
-										</div>
-										<span>{item}</span>
-									</li>
-								))}
-							</ul>
-						</CardContent>
-					</Card>
-				</TabsContent>
-
-				<TabsContent value="collegePrep" className="space-y-4">
-					<Card>
-						<CardHeader>
-							<CardTitle>College Preparation</CardTitle>
-							<CardDescription>
-								College planning steps for {gradeLevel} students
-							</CardDescription>
-						</CardHeader>
-						<CardContent>
-							<ul className="space-y-2">
-								{gradeMilestones.collegePrep.map((item, index) => (
-									<li key={index} className="flex items-start gap-2">
-										<div className="h-6 w-6 rounded-full bg-edu-green-light flex items-center justify-center text-edu-green font-medium shrink-0">
-											{index + 1}
-										</div>
-										<span>{item}</span>
-									</li>
-								))}
+							<ul className="list-disc list-inside space-y-2 text-muted-foreground text-sm">
+								<li>
+									<a
+										href="https://www.fastweb.com/"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="hover:underline">
+										Fastweb – Search for scholarships by interest, GPA, and more
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://www.bold.org/"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="hover:underline">
+										Bold.org – Apply to exclusive student scholarships
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://bigfuture.collegeboard.org/scholarship-search"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="hover:underline">
+										BigFuture – College Board’s scholarship database
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://www.scholarships.com/"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="hover:underline">
+										Scholarships.com – Browse by state, major, or demographic
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://blog.collegevine.com/scholarship-essay-examples/"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="hover:underline">
+										CollegeVine – Scholarship essay examples and tips
+									</a>
+								</li>
 							</ul>
 						</CardContent>
 					</Card>
