@@ -11,11 +11,55 @@ import L, { LatLngExpression } from "leaflet";
 const MapCard = ({ profile }) => {
 	const center = [profile.location.lat, profile.location.lng];
 	const randomOffset = () => 0.05 * Math.random() * (Math.random() < 0.5 ? -1 : 1);
+	const volunteeringPlaces = [
+		"AmeriCorps",
+		"Habitat for Humanity",
+		"American Red Cross",
+		"National Park Service",
+		"YMCA",
+		"Volunteers of America",
+		"Global Volunteers",
+		"VolunteerMatch",
+		"Peace Corps",
+		"Youth Service America (YSA)",
+		"National Volunteer Outreach Network (NVON)",
+		"United Nations Volunteers (UNV)",
+		"Ignatian Volunteer Corps (IVC)",
+		"ICVolunteers",
+		"American Youth Understanding Diabetes Abroad (AYUDA)",
+		"Globe Aware",
+		"Global Brigades",
+		"Good Hope Volunteers",
+		"International Service Learning (ISL)",
+		"Projects Abroad",
+		"Jesuit Volunteer Corps",
+		"Lutheran Volunteer Corps",
+		"Points of Light",
+		"Air Care Alliance",
+		"Engineers Without Borders USA",
+		"Financial Services Volunteer Corps",
+		"Florida Association for Volunteer Action in the Caribbean and Americas",
+		"Idealist",
+	];
+	const pickRandom = (arr, num) => {
+		const result = [];
+		const tempArray = [...arr];
+		for (let i = 0; i < num; i++) {
+			const randomIndex = Math.floor(Math.random() * tempArray.length);
+			result.push(tempArray.splice(randomIndex, 1)[0]);
+		}
+		return result;
+	};
+
 	const locations = [
 		{ id: 1, lat: center[0] + randomOffset(), lon: center[1] + randomOffset(), name: "Location 1" },
 		{ id: 2, lat: center[0] + randomOffset(), lon: center[1] + randomOffset(), name: "Location 2" },
 		{ id: 3, lat: center[0] + randomOffset(), lon: center[1] + randomOffset(), name: "Location 3" },
 	];
+	const volPlaces = pickRandom(volunteeringPlaces, locations.length);
+	for (const p in volPlaces) {
+		locations[p].name = volPlaces[p];
+	}
 	const zoom = 11;
 
 	return (
