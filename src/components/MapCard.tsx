@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { ExternalLink } from "lucide-react";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,16 +9,14 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L, { LatLngExpression } from "leaflet";
 
 const MapCard = ({ profile }) => {
-	const center: LatLngExpression = [profile.location.lat, profile.location.lng];
-
+	const center = [profile.location.lat, profile.location.lng];
 	const randomOffset = () => 0.05 * Math.random() * (Math.random() < 0.5 ? -1 : 1);
-	console.log(center);
 	const locations = [
 		{ id: 1, lat: center[0] + randomOffset(), lon: center[1] + randomOffset(), name: "Location 1" },
 		{ id: 2, lat: center[0] + randomOffset(), lon: center[1] + randomOffset(), name: "Location 2" },
 		{ id: 3, lat: center[0] + randomOffset(), lon: center[1] + randomOffset(), name: "Location 3" },
 	];
-	const zoom = 12;
+	const zoom = 11;
 
 	return (
 		<section className="space-y-6">
@@ -28,7 +26,14 @@ const MapCard = ({ profile }) => {
 						<CardTitle className="text-xl font-semibold">Map</CardTitle>
 						<CardDescription className="text-sm text-muted-foreground mt-1">Map of stuf</CardDescription>
 
-						<MapContainer center={center} zoom={zoom} scrollWheelZoom={false} style={{ height: 250 }}>
+						<MapContainer
+							// dont question it, it works
+							key={Math.random()}
+							center={center}
+							zoom={zoom}
+							scrollWheelZoom={false}
+							style={{ height: 250 }}
+						>
 							<TileLayer
 								attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 								url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

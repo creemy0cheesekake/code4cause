@@ -25,7 +25,8 @@ const Index: React.FC = () => {
 	} | null>(null);
 
 	const handleProfileUpdate = (newProfile: { graduationYear: number; location: string; interests: string[] }) => {
-		setProfile(newProfile);
+		// force deep copy to update all components
+		setProfile(JSON.parse(JSON.stringify(newProfile)));
 	};
 
 	return (
