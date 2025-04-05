@@ -12,7 +12,11 @@ import CommonAppInfoCard from "@/components/CommonAppInfoCard";
 import CompetitionsCard from "@/components/CompetitionsCard";
 import DualEnrollmentCard from "@/components/DualEnrollmentCard";
 import VolunteeringCard from "@/components/VolunteeringCard";
+
 import FAQFooter from "@/components/FAQFooter";
+
+import Footer from "@/components/Footer";
+
 import APSuggestionsCard from "@/components/APSuggestionsCard";
 
 import { yearsToGraduate } from "../lib/helpers";
@@ -20,12 +24,12 @@ import { yearsToGraduate } from "../lib/helpers";
 const Index: React.FC = () => {
 	const [profile, setProfile] = useState<{
 		graduationYear: number;
-		location: string;
+		location: { city: string; lat: number; lng: number };
 		interests: string[];
 	} | null>(null);
 
 	const handleProfileUpdate = (newProfile: { graduationYear: number; location: string; interests: string[] }) => {
-		// force deep copy to update all components
+		// force deep copy to update all components. needed, dont question it
 		setProfile(JSON.parse(JSON.stringify(newProfile)));
 	};
 
@@ -85,6 +89,7 @@ const Index: React.FC = () => {
 									yearsToGraduate(profile.graduationYear) >= 0 && <VolunteeringCard />}
 
 								<CollegeExplorer profile={profile} />
+
 								<MapCard profile={profile} />
 							</div>
 						</div>
@@ -92,7 +97,7 @@ const Index: React.FC = () => {
 				</div>
 			</main>
 
-			<FAQFooter />
+			<Footer />
 		</div>
 	);
 };

@@ -34,7 +34,7 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ onProfileUpdate, initPr
 	useEffect(() => {
 		if (initProfile) {
 			setGraduationYear(initProfile.graduationYear);
-			setLocation(initProfile.location);
+			setLocation(initProfile.location.city);
 			setSelectedInterests(initProfile.interests);
 			setFormCompleted(true);
 		}
